@@ -1,5 +1,5 @@
 # what is arenion?
-Arenion is a JavaScript program that enables you to easily send customized embed messages through Discord's webhooks. It is open-source and can be easily modified to suit your preferences. While it may not have all the advanced features of some other programs, it offers a simple and effective way to send professional-looking messages.# can 
+Arenion is a JavaScript program that enables you to easily send customized embed messages through Discord's webhooks. It is open-source and can be easily modified to suit your preferences. While it may not have all the advanced features of some other programs, it offers a simple and effective way to send professional-looking messages.
 
 Modification of Arenion is highly encouraged as it is an open-source program. The program serves as an educational tool for individuals seeking to gain knowledge on how to interact with webhooks in Discord. Users have the freedom to remove the provided basic template and replace it with their preferred layout. Some assets were used from previous projects for added convenience. We are currently in the process of documenting all of our projects for easy reference.
 
