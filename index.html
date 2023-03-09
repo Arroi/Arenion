@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arenion - Homepage</title>
+    <link rel="stylesheet" href="site_controller/module_control.css">
+    <noscript class="alert alert-warning">
+        <h1>You need to use Javascript in-order for a site checkup! please enable it.</h1>
+    </noscript>
+</head>
+<body>
+    <div class="nvbr">
+        <a href="index" class="nvbr_brand">Arenion</a>
+      </div>
+      <div class="bg-primary">
+        <div class="container">
+            <div class="p-5 d-flex align-items-center justify-content-center">
+                <div class="p-5 text-white text-center">
+                    <h1>Open-source Webhook controller.</h1>
+                    <p>Don't believe it? try it yourself!</p>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class=" p-5  mb-4 bg-light bg-gradient">
+        <div class="text-muted text-center">
+            <h1>Simply type whatever in the input, and submit it!</h1>
+            <p>it doesn't require json, how awesome!</p>
+            <div class="container">
+
+                <!-- This project was intended to quickly-save domain names for my list of Ai and other 
+                useful tools!  -->
+
+                <form id="domain-form">
+                    <div class="input-group mb-3">
+                        <input type="text" id="sendWebhook" placeholder="Send your message and it will display as an embed!" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        <button class="btn btn-outline-primary" type="submit" id="button-addon1">Submit your webhook</button>
+
+                    </div>
+                  </form>
+
+            </div>
+           
+        </div>
+        <div class="border-top mt-5 mb-2"></div>
+        <div class="p-4">
+            <h1>How it works:</h1>
+            <p>It uses Javascript to ship the input values to your webhook using an embed. <br>
+            To modify it, go to <code>arenion/site_controller/result.js</code>. 
+            <hr>
+            To modify the webhook link:
+            <pre><code>
+const webhookUrl = "https://discord.com/api/webhooks/WEBHOOK_ID/WEBHOOK_TOKEN";        </code></pre>
+                this tutorial assumes that  you already know how to work with webhooks, replace the existing webhook to your <br>
+                webhook link.
+                <hr>
+                To modify the embed:
+                <pre><code>
+const webhookMessage = {
+embeds: [
+{
+title: "Input has been sent.", // The title of the embed
+description: "", // The description of the embed
+color: 0xff0000, // the color of the embed
+ fields: [ // here are the field of the embed.
+{
+ name: "Message content:", // the title of the embed message
+value: "", // values that has been shipped using the input.
+inline: true, // recommended to keep it true.
+},
+],
+},
+],
+};
+                      
+                </code></pre>
+                To modify the embed, you can change it's title as shown above, 
+                for the sake of this tutorial, it has set to "Input has been sent"
+                You could modify the color & description to your liking.
+                <br>
+                You can modify the name of the message. but it's recommended to not modify the values as they're empty and should not consider modifying them.
+                <br>
+                <hr>
+                <p class="alert alert-warning">You get the idea, you can modify everything else. I'll make a tutorial about it soon. check out my channel for updates : <a href="https://www.youtube.com/channel/@itsyoboiarroi">https://www.youtube.com/channel/@itsyoboiarroi</a> for more information!</p>
+</div>
+    
+      </div>
+   
+      <script src="site_controller/result.js"></script>
+
+</body>
+</html>
