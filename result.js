@@ -1,13 +1,12 @@
-const webhookUrl = "https://discord.com/api/WEBHOOK_ID/WEBHOOK_TOKEN";
 const webhookMessage = {
   embeds: [
     {
-      title: "Input has been sent.",
+      title: "Oh! Someone sent something.",
       description: "",
       color: 0xff0000,
       fields: [
         {
-          name: "Message content:",
+          name: "I did! now let's see what did i type:",
           value: "",
           inline: true,
         },
@@ -16,20 +15,16 @@ const webhookMessage = {
   ],
 };
 
-
-/* 
-# In-order to change your input, change the form variable to something else
-# remember to use elements by their ID. 
-# you can change the rest after i release my documents on how to change 
-# arenion's settings and play with them
-*/
-
-const form = document.getElementById("domain-form"); // The form ID
+const form = document.getElementById("webhook-form"); // The form ID
 const sendWebhook = document.getElementById("sendWebhook"); // Input ID
+const webhookInput = document.getElementById("webhookInput"); // Webhook URL input ID
+
+webhookInput.addEventListener("input", (event) => {
+  webhookUrl = event.target.value; // Update the webhook URL
+});
+
 sendWebhook.addEventListener("input", (event) => { 
   webhookMessage.embeds[0].fields[0].value = event.target.value; 
-  // Sends the embed message in the fields which targets what value the input 
-  // has submitted.
 });
 
 form.addEventListener("submit", (event) => {
