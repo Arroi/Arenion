@@ -1,4 +1,4 @@
-const webhookUrl = "https://discord.com/api/webhooks/1083159500757934170/iyHZENucHcCyJ5UsGcTvRUifAByzoVz_90_PGaDbfVUQtRUTtHiIJ3f-7Dgc1GOze6OP";
+const webhookUrl = "https://discord.com/api/WEBHOOK_ID/WEBHOOK_TOKEN";
 const webhookMessage = {
   embeds: [
     {
